@@ -24,6 +24,7 @@ main() {
         }
         String? input = stdin.readLineSync();
         if (input != null) {
+          //esse if serve apenas para poder converter o input do teclado para int.
           int item = int.parse(input);
           if (item < produtos.length) {
             produtos.removeAt(item);
