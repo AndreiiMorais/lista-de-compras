@@ -15,8 +15,24 @@ main() {
         int a = 1;
         for (int i = 0; i < produtos.length; i++) {
           print("Item $a - ${produtos[i]}");
-          print("\n");
           a++;
+        }
+      } else if (text == "remover") {
+        print("Qual item deseja remover?");
+        for (int i = 0; i < produtos.length; i++) {
+          print("Item $i - ${produtos[i]}");
+        }
+        String? input = stdin.readLineSync();
+        if (input != null) {
+          int item = int.parse(input);
+          if (item < produtos.length) {
+            produtos.removeAt(item);
+            print("Produto removido");
+          } else {
+            print("Item Invalido");
+          }
+        } else {
+          print("Item invalido");
         }
       } else {
         //esse primeiro comando aqui no while serve para limpar o console na hora da execuçao.
