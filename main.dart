@@ -1,5 +1,5 @@
 import 'dart:io';
-
+//é possivel tambem declarar uma variavel fora do main, aqui em cima, onde ela se tornará uma variavel global, podendo ser acessada por outras funcoes.
 main() {
   List<String> produtos = [];
   bool condicao = true;
