@@ -5,6 +5,7 @@ main() {
   bool condicao = true;
   String texto;
   while (condicao) {
+    
     print("Adicione um produto: ");
     String? text = stdin.readLineSync();
     if (text == null || text.isNotEmpty) {
@@ -15,6 +16,8 @@ main() {
         print(produtos);
         print("\n");
       } else {
+        //esse primeiro comando aqui no while serve para limpar o console na hora da execuçao.
+        print("\x1B[2J\x1B[0;0H");
         texto = text.toString();
         produtos.add(texto);
       }
